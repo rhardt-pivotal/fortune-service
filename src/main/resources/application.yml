@@ -5,3 +5,7 @@ security:
 management:
   security:
     enabled: false
+
+spring:
+  jpa:
+    generate-ddl: true
