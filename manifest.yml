@@ -2,8 +2,6 @@
 applications:
 - name: fortune-service
   timeout: 120
-  random-route: true
-  path: ./target/fortune-service-0.0.1-SNAPSHOT.jar
   services:
   - fortune-db
   - config-server
@@ -11,6 +9,5 @@ applications:
   - service-registry
   - circuit-breaker-dashboard
   env:
-#    SPRING_PROFILES_ACTIVE: c2c
     JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
-    TRUST_CERTS: api.run.pivotal.io
+    TRUST_CERTS: api.sys.media-ext.disney.com

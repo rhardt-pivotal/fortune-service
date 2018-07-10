@@ -6,16 +6,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
-public class FortuneService {
+
+public class FortuneServiceDuplicate {
 
 	Logger logger = LoggerFactory
-			.getLogger(FortuneService.class);
+			.getLogger(FortuneServiceDuplicate.class);
 
-	@Autowired
+
 	FortuneRepository fortuneRepo;
 
-	@HystrixCommand(fallbackMethod = "getDefaultFortune")
+
 	public String getFortune(){
 
 		Fortune fortune = fortuneRepo.findRandomFortune();
