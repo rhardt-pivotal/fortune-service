@@ -43,6 +43,7 @@ public class FortuneServiceApplication {
             fortuneRepo.save(new Fortune(7L, "Today will be an awesome day!"));
             fortuneRepo.save(new Fortune(8L, "Things are heating up for you!"));
             fortuneRepo.save(new Fortune(9L, "I see an air conditioned office in your future!"));
+            fortuneRepo.save(new Fortune(9L, "Thermal Throttling is your best friend and worst enemy!"));
             logger.info("Fortune Repo record count: {}", fortuneRepo.count());
             fortuneRepo.findAll().forEach(x -> logger.debug(x.toString()));
         };
